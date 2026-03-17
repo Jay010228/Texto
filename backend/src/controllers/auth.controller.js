@@ -38,6 +38,7 @@ export const signup = async (req, res) => {
                 email: newUser.email,
                 profilePic: newUser.profilePic,
             });
+            console.log(generateToken(newUser._id, res));
 
         } else {
             res.status(400).json({ message: "Invalid user data" });
